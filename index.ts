@@ -36,7 +36,8 @@ while(condition)
 
    
 
-    if(addTask.addmore){
+    if(addTask.addmore||addTask.task
+    ){
     todo.push(addTask.task)
     }
     else if(addTask.delete){
@@ -64,10 +65,19 @@ while(condition)
     //             todo.splice(todo.indexOf(updateTask.task),1,updateTask2.task)
 
     //       }
+
+      //     if todo empty then print plese insert value
+      if (todo.length === 0) {
+        console.log("Please add a task.");
+    } else {
+        console.log(todo);
+    }
           
-          console.log(todo)
-         if(addTask.addmore==false){
-            condition=false
-         }
+        condition=addTask.addmore
+
+       
           
           }
+          for(let i=0;i<todo.length;i++){
+            console.log(todo[i])
+        }
